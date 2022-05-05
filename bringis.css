@@ -1,0 +1,238 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #a2a2a2;
+  padding-left: 5em;
+  padding-right: 5em;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  color: black;
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.container li {
+  padding: 0 1em;
+  background: linear-gradient(to right, black 50%, cadetblue 50%, cadetblue);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-out;
+}
+
+.container li:hover {
+  background-position: -100%;
+}
+
+.search__input {
+  border-radius: 10px;
+  padding: 2px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: linear-gradient(to right, black 50%, cadetblue 50%, cadetblue);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-out;
+}
+
+.search__input:hover {
+  background-position: -100%;
+}
+
+.logo {
+  text-transform: lowercase;
+  font-weight: bold;
+  font-size: 30px;
+  color: cadetblue;
+  font-family: "Kalam";
+}
+
+@media all and (max-width: 800px) {
+  header {
+    flex-direction: column;
+  }
+
+  .logo {
+    text-align: center;
+  }
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container > li {
+    padding: 0.2em 0;
+    margin-bottom: 5px;
+  }
+  .search {
+    margin-bottom: 6px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .container > li {
+    flex-basis: 100%;
+  }
+  .search {
+    /* order: 1; */
+    margin-bottom: 6px;
+  }
+}
+
+.reg-wrapper {
+  max-width: 450px;
+  width: 100%;
+  background: #fff;
+  margin: 50px auto;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease;
+  position: relative;
+}
+
+.log-wrapper {
+  max-width: 450px;
+  width: 100%;
+  background: #fff;
+  margin: 50px auto;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease;
+  position: relative;
+}
+
+.reg-active,
+.log-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.reg-wrapper .reg-form,
+.log-wrapper .log-form {
+  padding-top: 8%;
+  width: 90%;
+}
+
+.reg-wrapper .reg-title,
+.log-wrapper .log-title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 2%;
+  color: black;
+  text-align: center;
+}
+
+.reg-wrapper .reg-title:hover,
+.log-wrapper .log-title:hover {
+  color: cadetblue;
+}
+
+.reg-wrapper .reg-form .reg-input,
+.log-wrapper .log-form .log-input {
+  margin-bottom: 17px;
+}
+
+.reg-wrapper .reg-form .reg-input .google-reg,
+.reg-wrapper .reg-form .reg-input .facebook-reg,
+.reg-wrapper .reg-form .reg-input .apple-reg,
+.log-wrapper .log-form .log-input .google-log {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  outline: none;
+  border: 1px solid lightgray;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: all 0.9s ease;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.reg-wrapper .reg-form .reg-input .facebook-reg {
+  background-color: rgba(0, 100, 255);
+  color: white;
+}
+
+.reg-wrapper .reg-form .reg-input .apple-reg {
+  background-color: rgba(0, 0, 0);
+  color: white;
+}
+
+.reg-wrapper .reg-form .reg-input .google-reg:hover,
+.reg-wrapper .reg-form .reg-input .facebook-reg:hover,
+.reg-wrapper .reg-form .reg-input .apple-reg:hover,
+.log-wrapper .log-form .log-input .google-log:hover {
+  opacity: 1;
+}
+
+.reg-wrapper .polisi-teksti,
+.log-wrapper .polisi-teksti {
+  padding-top: 5%;
+  font-size: 13px;
+  text-align: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  .reg-wrapper .reg-form .reg-input,
+  .log-wrapper .log-form .log-input {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .reg-wrapper .reg-form .reg-input .polisi-teksti,
+  .log-wrapper .log-form .log-input .polisi-teksti {
+    flex-direction: row;
+  }
+}
+
+.reg-wrapper .reg-form .reg-input .reg-close,
+.log-wrapper .log-form .log-input .log-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: kalam;
+}
+
+.reg-wrapper .reg-form .reg-input .reg-close:hover,
+.log-wrapper .log-form .log-input .log-close:hover {
+  color: cadetblue;
+}

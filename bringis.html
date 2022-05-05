@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.bringis.com</title>
+    <link rel="stylesheet" href="bringis.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Kalam'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo" onclick="homePage()">bringis</h1>
+        <div class="search">
+            <input type="text" class="search__input" aria-label="search" placeholder="Haku..." onclick="search()">
+            <i class="fa fa-search"></i></button>
+        </div>
+        <ul class="container">
+            <li class="open-aboutus">Meistä</li>
+            <li class="open-reg">Rekisteröidy</li>
+            <li class="open-login">Kirjaudu</li>
+            <li class="open-contact">Yhteystiedot</li>
+        </ul>   
+    </header>
+    
+    <main>
+
+
+
+        <div class="reg-wrapper">
+            <div class="reg-title">
+              Luo bringis tili
+            </div>
+            <div class="reg-subtitle">
+                Luo uusi <big style="color: cadetblue; font-family: kalam; font-weight: bold;">bringis</big> tili.
+              </div>
+            <div class="reg-form">
+               <div class="reg-input">
+                  <!-- <label>Etunimi</label> -->
+                  <span class="google-reg">Continue with Google</span>
+               </div>  
+                <div class="reg-input">
+                  <span class="facebook-reg">Continue with Facebook</span>
+               </div>  
+               <div class="reg-input">
+                  <span class="apple-reg">Continue with Apple</span>
+               </div>  
+               <div class="reg-input">
+              <span class="reg-close">X</span>
+            </div>
+            </div>
+            <div class="reg-input">
+                <span class="polisi-teksti">This site is protected by Google Privacy Policy and Terms of Service apply.</span>
+              </div>
+        </div>
+
+        <div class="log-wrapper">
+            <div class="log-title">
+              Kirjaudu sinun sähköpostilla
+            </div>
+            <div class="log-form">
+               <div class="log-input">
+                  <!-- <label>Etunimi</label> -->
+                  <input class="google-log" placeholder="Log in with your email..."></input>
+               </div>  
+                <div class="reg-input">
+                  <button class="log-btn">Next</button>
+               </div>  
+               <div class="log-input">
+              <span class="log-close">X</span>
+            </div>
+            </div>
+            <div class="log-input">
+                <span class="polisi-teksti">This site is protected by Google Privacy Policy and Terms of Service apply.</span>
+              </div>
+        </div>
+        
+    </main>
+    
+    <footer>
+
+    </footer>
+</body>
+
+<script src="bringis.js"></script>
+</html>
